@@ -5,12 +5,15 @@ GET http://localhost:3333/courses
 GET http://localhost:3333/courses/3b92e77f-8bbd-491d-a454-64e70c5489e5
 
 ###
+GET http://localhost:3333/courses/3b92e77f-8bbd-491d-a454-64e70c5489e5
+
+###
 # FILTRO DE BUSCA
 GET http://localhost:3333/courses?search=react
 
 ###
 # ORDENACAO
-GET http://localhost:3333/courses?orderBy=title
+GET http://localhost:3333/courses?orderBy=title&page=2
 
 ###
 
@@ -18,5 +21,5 @@ POST http://localhost:3333/courses
 Content-Type: application/json
 
 {
-  "title": "Curso de Angular"
+  "title": "Curso de Angular 3"
 }
