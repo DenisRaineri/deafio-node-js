@@ -5,7 +5,7 @@ import { users } from '../../database/schema.ts';
 import { hash } from 'argon2';
 import { randomUUID } from 'node:crypto';
 
-export async function makeUser(role?: 'manager' | 'student') {
+export async function makeUser(options?: { role?: 'manager' | 'student' }) {
   const passwordBeforeHash = randomUUID();
 
   const result = await db
@@ -14,12 +14,31 @@ export async function makeUser(role?: 'manager' | 'student') {
       name: faker.person.fullName(),
       email: faker.internet.email(),
       password: await hash(passwordBeforeHash),
-      role,
+      role: options?.role,
     })
     .returning();
 
+  const user = result[0]!;
+
+  if (options?.role) {
+    if (!process.env.JWT_SECRET) {
+      throw new Error('JWT_SECRET is required.');
+    }
+
+    const token = jwt.sign(
+      { sub: user.id, role: user.role },
+      process.env.JWT_SECRET,
+    );
+
+    return {
+      user,
+      passwordBeforeHash,
+      token,
+    };
+  }
+
   return {
-    user: result[0],
+    user,
     passwordBeforeHash,
   };
 }
