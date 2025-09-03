@@ -5,29 +5,8 @@
     {
       "idx": 0,
       "version": "7",
-      "when": 1755533982275,
-      "tag": "0000_new_silver_sable",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1755554721890,
-      "tag": "0001_clean_namora",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "7",
-      "when": 1755989455270,
-      "tag": "0002_ordinary_morph",
-      "breakpoints": true
-    },
-    {
-      "idx": 3,
-      "version": "7",
-      "when": 1755992253015,
-      "tag": "0003_fixed_rafael_vega",
+      "when": 1756851006121,
+      "tag": "0000_stormy_gideon",
       "breakpoints": true
     }
   ]

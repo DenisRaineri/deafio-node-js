@@ -1,11 +1,14 @@
 GET http://localhost:3333/courses
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhYzRjYTgzZi1jNmVhLTRlMzgtOTRiYy02YjQzNmJkYzAxNjAiLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTc1NjkzNjI2N30.-LqoGGL7crgAK2WUeCEnboodByxs0Y5-nHUawwJP-mE
 
 ###
 
 GET http://localhost:3333/courses/3b92e77f-8bbd-491d-a454-64e70c5489e5
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhYzRjYTgzZi1jNmVhLTRlMzgtOTRiYy02YjQzNmJkYzAxNjAiLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTc1NjkzNjI2N30.-LqoGGL7crgAK2WUeCEnboodByxs0Y5-nHUawwJP-mE
 
 ###
-GET http://localhost:3333/courses/3b92e77f-8bbd-491d-a454-64e70c5489e5
+GET http://localhost:3333/courses/6d6338c4-32a3-4cb2-8ec5-16c2856dd18c
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhYzRjYTgzZi1jNmVhLTRlMzgtOTRiYy02YjQzNmJkYzAxNjAiLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTc1NjkzNjI2N30.-LqoGGL7crgAK2WUeCEnboodByxs0Y5-nHUawwJP-mE
 
 ###
 # FILTRO DE BUSCA
@@ -22,4 +25,14 @@ Content-Type: application/json
 
 {
   "title": "Curso de Angular 3"
+}
+
+###
+
+POST http://localhost:3333/sessions
+Content-Type: application/json
+
+{
+  "email": "Valentina12@bol.com.br",
+  "password": "123456"
 }
